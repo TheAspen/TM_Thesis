@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/WeaponBase_Script.gd" type="Script" id=1]
+
+[node name="Weapon_BaseNode" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="CurrentWeapon" type="Node2D" parent="." index="0"]
+
+_sections_unfolded = [ "Z Index" ]
+
+

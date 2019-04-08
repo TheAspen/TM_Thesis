@@ -1,0 +1,370 @@
+[gd_scene load_steps=72 format=2]
+
+[ext_resource path="res://Scripts/Dummy_Script.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonBackWalk/Head/MEA_Skeleton64_Head_BackWalk1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonRightWalk/Head/MEA_Skeleton64_Head_WalkRight1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonRightWalk/Head/MEA_Skeleton64_Head_WalkRight2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonRightWalk/Head/MEA_Skeleton64_Head_WalkRight3.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonRightWalk/Head/MEA_Skeleton64_Head_WalkRight4.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonLeftWalk/Head/MEA_Skeleton64_Head_WalkLeft1.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonLeftWalk/Head/MEA_Skeleton64_Head_WalkLeft2.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonLeftWalk/Head/MEA_Skeleton64_Head_WalkLeft3.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonLeftWalk/Head/MEA_Skeleton64_Head_WalkLeft4.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/Head/MEA_Skeleton64_Head_WalkFront1_2.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonBackWalk/Head/MEA_Skeleton64_Head_BackWalk2.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonBackWalk/Head/MEA_Skeleton64_Head_BackWalk3.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonBackWalk/Head/MEA_Skeleton64_Head_BackWalk4.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/Head/MEA_Skeleton64_Head_WalkFront1_3.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/Head/MEA_Skeleton64_Head_WalkFront1_4.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/Head/MEA_Skeleton64_Head_WalkFront1_5.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonBackWalk/Hands/MEA_Skeleton64_Hands_BackWalk1.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonRightWalk/Hands/MEA_Skeleton64_Hands_WalkRight1.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonRightWalk/Hands/MEA_Skeleton64_Hands_WalkRight2.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonRightWalk/Hands/MEA_Skeleton64_Hands_WalkRight3.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonRightWalk/Hands/MEA_Skeleton64_Hands_WalkRight4.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonLeftWalk/Hands/MEA_Skeleton64_Hands_WalkLeft1.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonLeftWalk/Hands/MEA_Skeleton64_Hands_WalkLeft2.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonLeftWalk/Hands/MEA_Skeleton64_Hands_WalkLeft3.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonLeftWalk/Hands/MEA_Skeleton64_Hands_WalkLeft4.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/Hands/MEA_Skeleton64_Hands_WalkFront1.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonBackWalk/Hands/MEA_Skeleton64_Hands_BackWalk2.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonBackWalk/Hands/MEA_Skeleton64_Hands_BackWalk3.png" type="Texture" id=29]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonBackWalk/Hands/MEA_Skeleton64_Hands_BackWalk4.png" type="Texture" id=30]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/Hands/MEA_Skeleton64_Hands_WalkFront2.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/Hands/MEA_Skeleton64_Hands_WalkFront3.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/Hands/MEA_Skeleton64_Hands_WalkFront4.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonBackWalk/Torso/MEA_Skeleton64_Torso_BackWalk1.png" type="Texture" id=34]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonRightWalk/Torso/MEA_Skeleton64_Torso_WalkRight1.png" type="Texture" id=35]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonRightWalk/Torso/MEA_Skeleton64_Torso_WalkRight2.png" type="Texture" id=36]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonRightWalk/Torso/MEA_Skeleton64_Torso_WalkRight3.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonRightWalk/Torso/MEA_Skeleton64_Torso_WalkRight4.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonLeftWalk/Torso/MEA_Skeleton64_Torso_WalkLeft1.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonLeftWalk/Torso/MEA_Skeleton64_Torso_WalkLeft2.png" type="Texture" id=40]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonLeftWalk/Torso/MEA_Skeleton64_Torso_WalkLeft3.png" type="Texture" id=41]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonLeftWalk/Torso/MEA_Skeleton64_Torso_WalkLeft4.png" type="Texture" id=42]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/Torso/MEA_Skeleton64_Torso_WalkFront1.png" type="Texture" id=43]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/Torso/MEA_Skeleton64_Torso_WalkFront2.png" type="Texture" id=44]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/Torso/MEA_Skeleton64_Torso_WalkFront3.png" type="Texture" id=45]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/Torso/MEA_Skeleton64_Torso_WalkFront4.png" type="Texture" id=46]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonBackWalk/Torso/MEA_Skeleton64_Torso_BackWalk2.png" type="Texture" id=47]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonBackWalk/Torso/MEA_Skeleton64_Torso_BackWalk3.png" type="Texture" id=48]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonBackWalk/Torso/MEA_Skeleton64_Torso_BackWalk4.png" type="Texture" id=49]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonBackWalk/Legs/MEA_Skeleton64_Legs_BackWalk1.png" type="Texture" id=50]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonRightWalk/Legs/MEA_Skeleton64_Legs_WalkRight1.png" type="Texture" id=51]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonRightWalk/Legs/MEA_Skeleton64_Legs_WalkRight2.png" type="Texture" id=52]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonRightWalk/Legs/MEA_Skeleton64_Legs_WalkRight3.png" type="Texture" id=53]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonRightWalk/Legs/MEA_Skeleton64_Legs_WalkRight4.png" type="Texture" id=54]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonLeftWalk/Legs/MEA_Skeleton64_Legs_WalkLeft1.png" type="Texture" id=55]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonLeftWalk/Legs/MEA_Skeleton64_Legs_WalkLeft2.png" type="Texture" id=56]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonLeftWalk/Legs/MEA_Skeleton64_Legs_WalkLeft3.png" type="Texture" id=57]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonLeftWalk/Legs/MEA_Skeleton64_Legs_WalkLeft4.png" type="Texture" id=58]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/Legs/MEA_Skeleton64_Legs_WalkFront1.png" type="Texture" id=59]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonBackWalk/Legs/MEA_Skeleton64_Legs_BackWalk2.png" type="Texture" id=60]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonBackWalk/Legs/MEA_Skeleton64_Legs_BackWalk3.png" type="Texture" id=61]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonBackWalk/Legs/MEA_Skeleton64_Legs_BackWalk4.png" type="Texture" id=62]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/Legs/MEA_Skeleton64_Legs_WalkFront2.png" type="Texture" id=63]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/Legs/MEA_Skeleton64_Legs_WalkFront3.png" type="Texture" id=64]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/Legs/MEA_Skeleton64_Legs_WalkFront4.png" type="Texture" id=65]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Idle_Up",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Walk_Right",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "Walk_Left",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "Idle_Left",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "Idle_Down",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Idle_Right",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "Walk_Up",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "Walk_Down",
+"speed": 12.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "Idle_Up",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "Walk_Right",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "Walk_Left",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "Idle_Left",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "Idle_Down",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "Idle_Right",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "Walk_Up",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "Walk_Down",
+"speed": 12.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 34 ) ],
+"loop": true,
+"name": "Idle_Up",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "Walk_Right",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ) ],
+"loop": true,
+"name": "Walk_Left",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 39 ) ],
+"loop": true,
+"name": "Idle_Left",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ) ],
+"loop": true,
+"name": "Idle_Down",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 35 ) ],
+"loop": true,
+"name": "Idle_Right",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 34 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ) ],
+"loop": true,
+"name": "Walk_Up",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ) ],
+"loop": true,
+"name": "Walk_Down",
+"speed": 12.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 50 ) ],
+"loop": true,
+"name": "Idle_Up",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ) ],
+"loop": true,
+"name": "Walk_Right",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ) ],
+"loop": true,
+"name": "Walk_Left",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 55 ) ],
+"loop": true,
+"name": "Idle_Left",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 59 ) ],
+"loop": true,
+"name": "Idle_Down",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 51 ) ],
+"loop": true,
+"name": "Idle_Right",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ) ],
+"loop": true,
+"name": "Walk_Up",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 59 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ) ],
+"loop": true,
+"name": "Walk_Down",
+"speed": 12.0
+} ]
+
+[node name="Dummy_BaseNode" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+isAggressive = 0
+isEnemy = 0
+isAlly = 0
+isNeutral = 0
+
+[node name="NPC_Character" type="Area2D" parent="." index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 4
+collision_mask = 7
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "collision" ]
+
+[node name="Collision" type="CollisionShape2D" parent="NPC_Character" index="0"]
+
+position = Vector2( -0.225213, 0.413943 )
+scale = Vector2( 2.55412, -3.16224 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Character" type="AnimatedSprite" parent="NPC_Character" index="1"]
+
+frames = SubResource( 2 )
+animation = "default"
+
+[node name="Head" type="AnimatedSprite" parent="NPC_Character/Character" index="0"]
+
+z_index = 2
+frames = SubResource( 3 )
+animation = "Walk_Down"
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Hands" type="AnimatedSprite" parent="NPC_Character/Character" index="1"]
+
+z_index = 3
+frames = SubResource( 4 )
+animation = "Walk_Down"
+_sections_unfolded = [ "Visibility", "Z Index" ]
+
+[node name="Torso" type="AnimatedSprite" parent="NPC_Character/Character" index="2"]
+
+frames = SubResource( 5 )
+animation = "Walk_Down"
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Legs" type="AnimatedSprite" parent="NPC_Character/Character" index="3"]
+
+frames = SubResource( 6 )
+animation = "Walk_Down"
+frame = 1
+
+[node name="Down_WeaponPos" type="Position2D" parent="NPC_Character" index="2"]
+
+visible = false
+position = Vector2( -26.4498, 11.0264 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Up_WeaponPos" type="Position2D" parent="NPC_Character" index="3"]
+
+visible = false
+position = Vector2( 26.0944, 9.31764 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Right_WeaponPos" type="Position2D" parent="NPC_Character" index="4"]
+
+visible = false
+position = Vector2( 4.16537, 15.8679 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Left_WeaponPos" type="Position2D" parent="NPC_Character" index="5"]
+
+visible = false
+position = Vector2( -3.96816, 16.0103 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Head_ArmorPos" type="Position2D" parent="NPC_Character" index="6"]
+
+position = Vector2( 0, -31.3272 )
+
+[node name="Chest_ArmorPos" type="Position2D" parent="NPC_Character" index="7"]
+
+position = Vector2( 0.569588, 16.0908 )
+
+

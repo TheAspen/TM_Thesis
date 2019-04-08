@@ -1,0 +1,413 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Inventory_Script.gd" type="Script" id=1]
+[ext_resource path="res://Assets/UI/GUI/Inventory/Gear_Rect_TEMP.png" type="Texture" id=2]
+[ext_resource path="res://Assets/UI/GUI/Inventory/Gear_Rect_Hover_TEMP.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/EA_Skeleton64_WalkColor1.png" type="Texture" id=4]
+
+[node name="Inventory_BaseNode" type="MarginContainer"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "custom_constants" ]
+Rect_Texture_Normal = ExtResource( 2 )
+Rect_Texture_Hovered = ExtResource( 3 )
+
+[node name="Background" type="Panel" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Horizontal_Container" type="HBoxContainer" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 25
+alignment = 0
+_sections_unfolded = [ "Margin", "Size Flags", "custom_constants" ]
+
+[node name="ItemList" type="ItemList" parent="Horizontal_Container" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 500.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 500, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+items = [  ]
+select_mode = 0
+allow_reselect = false
+icon_mode = 1
+fixed_icon_size = Vector2( 0, 0 )
+_sections_unfolded = [ "Columns", "Grow Direction", "Icon", "Mouse", "Pause", "Rect" ]
+
+[node name="Vertical_Button" type="VBoxContainer" parent="Horizontal_Container" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 525.0
+margin_right = 622.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 50
+alignment = 0
+_sections_unfolded = [ "Margin", "Size Flags" ]
+
+[node name="Use_Button" type="Button" parent="Horizontal_Container/Vertical_Button" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 97.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Use"
+flat = false
+align = 1
+_sections_unfolded = [ "Margin", "Rect", "Textures" ]
+
+[node name="Drop_Button" type="Button" parent="Horizontal_Container/Vertical_Button" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 70.0
+margin_right = 97.0
+margin_bottom = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Drop"
+flat = false
+align = 1
+_sections_unfolded = [ "Margin", "Rect" ]
+
+[node name="Delete_Button" type="Button" parent="Horizontal_Container/Vertical_Button" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 140.0
+margin_right = 97.0
+margin_bottom = 160.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Delete"
+flat = false
+align = 1
+_sections_unfolded = [ "Margin", "Rect" ]
+
+[node name="Items_Node" type="Node2D" parent="." index="2"]
+
+visible = false
+
+[node name="Icon_Player" type="Sprite" parent="." index="3"]
+
+position = Vector2( 837.18, 200.788 )
+scale = Vector2( 3.06141, 3.13164 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="Current_Gear" type="Node2D" parent="." index="4"]
+
+[node name="Armor_Container" type="VBoxContainer" parent="Current_Gear" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 943.0
+margin_top = 103.0
+margin_right = 1007.0
+margin_bottom = 303.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Head_Slot" type="TextureRect" parent="Current_Gear/Armor_Container" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 64.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+_sections_unfolded = [ "Margin" ]
+
+[node name="Head" type="TextureButton" parent="Current_Gear/Armor_Container/Head_Slot" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+_sections_unfolded = [ "Textures" ]
+
+[node name="Chest_Slot" type="TextureRect" parent="Current_Gear/Armor_Container" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 68.0
+margin_right = 64.0
+margin_bottom = 132.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+_sections_unfolded = [ "Margin" ]
+
+[node name="Chest" type="TextureButton" parent="Current_Gear/Armor_Container/Chest_Slot" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+
+[node name="Legs_Slot" type="TextureRect" parent="Current_Gear/Armor_Container" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 136.0
+margin_right = 64.0
+margin_bottom = 200.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+_sections_unfolded = [ "Margin", "Rect" ]
+
+[node name="Legs" type="TextureButton" parent="Current_Gear/Armor_Container/Legs_Slot" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+
+[node name="Weapon_Container" type="VBoxContainer" parent="Current_Gear" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 666.0
+margin_top = 173.0
+margin_right = 730.0
+margin_bottom = 237.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Mouse" ]
+
+[node name="Weapon_Slot" type="TextureRect" parent="Current_Gear/Weapon_Container" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 64.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+_sections_unfolded = [ "Margin", "Mouse" ]
+
+[node name="Weapon" type="TextureButton" parent="Current_Gear/Weapon_Container/Weapon_Slot" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+_sections_unfolded = [ "Textures" ]
+
+[connection signal="item_selected" from="Horizontal_Container/ItemList" to="." method="_on_ItemList_item_selected"]
+
+[connection signal="pressed" from="Horizontal_Container/Vertical_Button/Use_Button" to="." method="_on_Use_Button_pressed"]
+
+[connection signal="pressed" from="Horizontal_Container/Vertical_Button/Drop_Button" to="." method="_on_Drop_Button_pressed"]
+
+[connection signal="pressed" from="Horizontal_Container/Vertical_Button/Delete_Button" to="." method="_on_Delete_Button_pressed"]
+
+[connection signal="mouse_entered" from="Current_Gear/Armor_Container/Head_Slot/Head" to="." method="_on_Head_mouse_entered"]
+
+[connection signal="mouse_exited" from="Current_Gear/Armor_Container/Head_Slot/Head" to="." method="_on_Head_mouse_exited"]
+
+[connection signal="pressed" from="Current_Gear/Armor_Container/Head_Slot/Head" to="." method="_on_Head_pressed"]
+
+[connection signal="mouse_entered" from="Current_Gear/Armor_Container/Chest_Slot/Chest" to="." method="_on_Chest_mouse_entered"]
+
+[connection signal="mouse_exited" from="Current_Gear/Armor_Container/Chest_Slot/Chest" to="." method="_on_Chest_mouse_exited"]
+
+[connection signal="pressed" from="Current_Gear/Armor_Container/Chest_Slot/Chest" to="." method="_on_Chest_pressed"]
+
+[connection signal="mouse_entered" from="Current_Gear/Armor_Container/Legs_Slot/Legs" to="." method="_on_Legs_mouse_entered"]
+
+[connection signal="mouse_exited" from="Current_Gear/Armor_Container/Legs_Slot/Legs" to="." method="_on_Legs_mouse_exited"]
+
+[connection signal="pressed" from="Current_Gear/Armor_Container/Legs_Slot/Legs" to="." method="_on_Legs_pressed"]
+
+[connection signal="mouse_entered" from="Current_Gear/Weapon_Container/Weapon_Slot/Weapon" to="." method="_on_Weapon_mouse_entered"]
+
+[connection signal="mouse_exited" from="Current_Gear/Weapon_Container/Weapon_Slot/Weapon" to="." method="_on_Weapon_mouse_exited"]
+
+[connection signal="pressed" from="Current_Gear/Weapon_Container/Weapon_Slot/Weapon" to="." method="_on_Weapon_pressed"]
+
+

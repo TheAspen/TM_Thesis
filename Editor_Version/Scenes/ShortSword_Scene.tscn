@@ -1,0 +1,144 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/ShortSword_Script.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Characters/Skeleton/EA_SkeletonFrontWalk/EA_Skeleton64_WalkColor1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Weapons/ShortSwords/Basic/MEA_ShortSword_Idle_Down.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Weapons/ShortSwords/Basic/MEA_ShortSword_Basic3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Weapons/ShortSwords/Basic/MEA_ShortSword_Hit_Down.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Weapons/ShortSwords/Basic/MEA_ShortSword_Hit_Right.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Ground",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 5 ) ],
+"loop": false,
+"name": "Hit_Up",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 5 ) ],
+"loop": false,
+"name": "Hit_Left",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Move_Right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Move_Up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 6 ) ],
+"loop": false,
+"name": "Hit_Right",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 5 ) ],
+"loop": false,
+"name": "Hit_Down",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Move_Down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Move_Left",
+"speed": 5.0
+} ]
+_sections_unfolded = [ "Resource" ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
+[node name="ShortSword_BaseNode" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="TEMP_Player" type="Sprite" parent="." index="0"]
+
+visible = false
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Weapon_Sprite" type="AnimatedSprite" parent="." index="1"]
+
+position = Vector2( 0.169472, -0.770173 )
+frames = SubResource( 1 )
+animation = "Hit_Down"
+centered = false
+offset = Vector2( -32, -54 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Collision_Down" type="CollisionShape2D" parent="." index="2"]
+
+position = Vector2( 0.585386, 43.6328 )
+scale = Vector2( 0.595208, -0.646363 )
+shape = SubResource( 2 )
+disabled = true
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Collision_Up" type="CollisionShape2D" parent="." index="3"]
+
+position = Vector2( 0.391676, -51.933 )
+scale = Vector2( 0.595208, -0.740305 )
+shape = SubResource( 2 )
+disabled = true
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Collision_Right" type="CollisionShape2D" parent="." index="4"]
+
+position = Vector2( 45.6336, -2.46402 )
+scale = Vector2( 1.5372, -0.256444 )
+shape = SubResource( 2 )
+disabled = true
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Collision_Left" type="CollisionShape2D" parent="." index="5"]
+
+position = Vector2( -44.0064, -1.98837 )
+scale = Vector2( 1.59273, -0.256444 )
+shape = SubResource( 2 )
+disabled = true
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Icon_Sprite" type="Sprite" parent="." index="6"]
+
+visible = false
+texture = ExtResource( 3 )
+
+[connection signal="area_shape_entered" from="." to="." method="_on_ShortSword_BaseNode_area_shape_entered"]
+
+[connection signal="animation_finished" from="Weapon_Sprite" to="." method="_on_Animation_animation_finished"]
+
+

@@ -1,0 +1,135 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Map2_Script.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tiles/Nature/NatureTileSet.tres" type="TileSet" id=2]
+[ext_resource path="res://Scenes/Item_Scene.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/HP_Potion_Scene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/Level_Changer_Script.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Map2_BaseNode" type="Node2D"]
+
+script = ExtResource( 1 )
+MapName = "Map2_Scene"
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 2, 0, 65538, 3, 0, 65539, 3, 0, 65540, 3, 0, 65541, 3, 0, 65542, 3, 0, 65543, 3, 0, 65544, 3, 0, 65545, 3, 0, 65546, 3, 0, 65547, 3, 0, 65548, 3, 0, 65549, 3, 0, 65550, 2, 0, 65551, 0, 0, 131072, 0, 0, 131073, 3, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 3, 0, 131087, 0, 0, 196608, 0, 0, 196609, 3, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 0, 0, 196614, 0, 0, 196615, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 3, 0, 196623, 0, 0, 262144, 0, 0, 262145, 3, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 0, 0, 262150, 2, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, 262156, 1, 0, 262157, 1, 0, 262158, 3, 0, 262159, 0, 0, 327680, 0, 0, 327681, 3, 0, 327682, 2, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 0, 0, 327688, 1, 0, 327689, 2, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 3, 0, 327695, 0, 0, 393216, 0, 0, 393217, 3, 0, 393218, 0, 0, 393219, 1, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1, 0, 393223, 1, 0, 393224, 1, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 3, 0, 393231, 0, 0, 458752, 0, 0, 458753, 2, 0, 458754, 3, 0, 458755, 3, 0, 458756, 3, 0, 458757, 3, 0, 458758, 3, 0, 458759, 3, 0, 458760, 3, 0, 458761, 3, 0, 458762, 3, 0, 458763, 3, 0, 458764, 3, 0, 458765, 3, 0, 458766, 2, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0 )
+
+[node name="Enviroment" type="Node2D" parent="." index="1"]
+
+[node name="Item_BaseNode" parent="Enviroment" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 480.212, 346.895 )
+
+[node name="HP_Potion_BaseNode" parent="Enviroment/Item_BaseNode" index="4" instance=ExtResource( 4 )]
+
+[node name="Player_Map1Spawn" type="Position2D" parent="." index="2"]
+
+position = Vector2( 33.241, 269.252 )
+
+[node name="Level_Changer" type="Area2D" parent="." index="3"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 1024
+collision_mask = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 5 )
+_sections_unfolded = [ "Collision" ]
+Next_Map = "Map1"
+Spawn_Point = "Player_Map2Spawn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level_Changer" index="0"]
+
+position = Vector2( 16.777, 164.241 )
+scale = Vector2( 1.35297, 2.21266 )
+shape = SubResource( 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -72.0
+margin_top = 155.0
+margin_right = 8.0
+margin_bottom = 172.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Leave Area"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "custom_colors" ]
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 411.0
+margin_top = 142.0
+margin_right = 562.0
+margin_bottom = 179.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = false
+bbcode_text = ""
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "THIS LEVEL IS EMPTY! GO AWAY!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "custom_colors" ]
+
+[connection signal="area_entered" from="Level_Changer" to="Level_Changer" method="_on_Level_Changer_area_entered"]
+
+
