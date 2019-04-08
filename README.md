@@ -1,4 +1,4 @@
-This project is example game project, which has developed during my thesis in 2019. 
+This project is example game project, which is developed during my thesis in 2019. 
 
 # Notice!
 This project may contain some bugs, unfinished codes and assets.
