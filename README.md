@@ -11,5 +11,5 @@ This repository is NOT going to be updated very often.
 - AI sprite might glitch.
 - Player animations might get stuck.
 
-Regards: Teemu Miettinen
+Regards: Teemu Miettinen,
 Kajaani University of Applied Sciences
